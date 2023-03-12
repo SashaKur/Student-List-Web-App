@@ -1,0 +1,114 @@
+﻿.btn-stud-save {
+    padding: 10px 15px;
+    text-align: center;
+    margin-left: 120px;
+}
+
+.stud-form-img {
+    height: 200px;
+    width: 200px;
+    border: 5px solid black;
+    display: block;
+    margin-left: 100px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.stud-form label input {
+    border-color: darkslateblue;
+    border-radius: 0px;
+    width: 400px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.stud-form label {
+    display: block;
+}
+
+.stud-form lable span, input, image {
+    display: flex;
+}
+
+.stud-img-label {
+    margin-left: 0px;
+}
+
+    .studs-table tr th {
+        border: 5px solid black;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .studs-table tr th .text {
+        cursor: pointer;
+    }
+
+    .studs-table tr th .text:hover {
+        color: darkslateblue;
+    }
+
+    .studs-table tr td {
+        border: 3px solid black;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .studs-table tr td:last-child {
+        border: none;
+    }
+
+.stud-delete-button {
+    color: white;
+    background-color: darkslateblue;
+    padding: 8px 13px;
+    font-weight: bold;
+}
+
+    .stud-image {
+        width: 60px;
+        height: 60px;
+    }
+
+.submition {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(162,210,243,0.75);
+}
+
+    .submitiom-content {
+        background-color: white;
+        margin: 20% auto;
+        padding: 10px;
+        min-width: 250px;
+        width: 20%;
+        border: 1px solid black;
+    }
+
+    .header {
+        padding: 10px 15px
+    }
+
+    .body {
+        display: flex;
+    }
+
+    .sub-button {
+        margin: auto;
+        min-width: 25px;
+        width: 125px;
+        max-width: 250px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    .sub-button:last-child {
+        background-color: darkslateblue;
+        color: white;
+    }

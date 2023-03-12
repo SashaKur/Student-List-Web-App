@@ -1,0 +1,59 @@
+﻿@page "/students/{ID:int}"
+@inject IStudentData repository
+
+@code {
+    [Parameter]
+    public int ID { get; set; }
+    private Student student;
+
+    protected override void OnInitialized()
+    {
+        student = repository.FindStudent(ID);
+    }
+}
+
+@if (student != null)
+{
+    <h1  style="font-family:'Arial Rounded MT'">Student Form</h1>
+    <hr />
+    <form action="/students" class="stud-form">
+
+            <label style="font-family:'Arial Rounded MT'">
+                <span>First name: </span>
+                <input @bind="student.FirstName" />
+            </label>
+
+            <label style="font-family:'Arial Rounded MT'">
+                <span>Last name: </span>
+                <input @bind="student.LastName" />
+            </label style="font-family:'Arial Rounded MT'">
+
+            <label style="font-family:'Arial Rounded MT'" class="stud-img-label">
+                <span>Avatar: </span>
+                <input @bind="student.Avatar" />
+                <img src="@student.Avatar" title="avatar" class="stud-form-img">
+            </label>
+
+
+
+        <label style="font-family:'Arial Rounded MT'">
+            <span>Birth date: </span>
+            <input type="date" @bind="student.BirthDate" />
+        </label>
+
+        <label style="font-family:'Arial Rounded MT'">
+            <span>Studies: </span>
+            <input @bind="student.Studies" />
+        </label>
+
+        <button  style="font-family:'Arial Rounded MT'" type="submit" class="btn-stud-save">Save changes</button>
+    </form>
+}
+else
+{
+    <h1>Cannot find student with that ID</h1>
+    <hr />
+}
+
+
+
